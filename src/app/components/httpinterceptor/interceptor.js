@@ -29,14 +29,12 @@ angular.module('angularjsHttpInterceptor')
           // On response failture
           responseError: function(rejection) {
 
-            if (rejection.data.status === 400) {
-              var GlobalAlerts = $injector.get('GlobalAlerts');
-              GlobalAlerts.setHttpCodeToMessage(rejection.data.status, rejection.data.message);
-            }
-
-            if (rejection.data.status === 401) {
-              var Session = $injector.get('Session');
-              Session.destroy('Your token has expired!');
+            if (rejection.status === 401) {
+              var $state = $injector.get('$state');
+              console.log('***** HTTP Interceptor *****');
+              console.log('Intercepted HTTP Error 401');
+              console.log('Redirecting you back to sign-in page');
+              $state.go('login');
             }
 
             // Return the promise rejection.

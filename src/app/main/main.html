@@ -5,37 +5,35 @@
       <div class="panel">
         <h1>AngularJS HTTP Interceptor Factory</h1>
       </div>
-<section>
-  <form name="login" ng-submit="authenticate(username, password)">
-    <div class="row">
-      <div class="large-4 columns large-offset-4">
-        <label>Email
-          <input type="text" placeholder="email" ng-model="username" ng-focus="error.message = ''" required/>
-        </label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-4 columns large-offset-4">
-        <label>Password
-          <input type="password" placeholder="password" ng-model="password" ng-focus="error.message = ''" required/>
-        </label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-4 columns large-offset-4">
-        <input class="button" type="submit" value="Login"></li>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-4 columns large-offset-4">
-        <span ng-bind-html="error.message"></span>
-      </div>
-    </div>
-  </form>
-</section>
-
-
-
+      <section>
+        <form name="login" ng-submit="authenticateUser(username, password)">
+          <div class="row">
+            <div class="large-4 columns large-offset-4">
+              <label>Email
+                <input type="text" placeholder="email" ng-model="username" ng-focus="error.message = ''" required/>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-4 columns large-offset-4">
+              <label>Password
+                <input type="password" placeholder="password" ng-model="password" ng-focus="error.message = ''" required/>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-4 columns large-offset-4">
+              <input class="button" type="submit" value="Login">
+              </li>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-4 columns large-offset-4">
+              <span ng-bind-html="error.message"></span>
+            </div>
+          </div>
+        </form>
+      </section>
     </div>
   </div>
 </div>

@@ -17,6 +17,4 @@ angular.module('angularjsHttpInterceptor', ['ngAnimate', 'ngCookies', 'ngTouch',
     $urlRouterProvider.otherwise('/');
     // Add the interceptor to the $httpProvider.
     $httpProvider.interceptors.push('HTTPInterceptor');
-// 
-	// RestangularProvider.setBaseUrl('http://localhost:8080/v1');
   });
